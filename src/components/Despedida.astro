@@ -1,0 +1,413 @@
+---
+// Despedida.astro
+---
+
+<section class="py-4 px-4 relative overflow-hidden">
+  <div class="max-w-6xl mx-auto relative z-10">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="flex justify-center mb-10" id="flores-arriba-despedida">
+        <img
+          src="/imagenes/Separadores.webp"
+          alt="Flores decorativas"
+          class="w-40 md:w-48 lg:w-56 h-auto object-contain opacity-90"
+        />
+      </div>
+
+      <div
+        class="relative backdrop-blur-sm bg-white/10 rounded-[2.5rem] border-2 border-[#8C5A63]/20 p-10 md:p-12 lg:p-16"
+        id="card-despedida"
+      >
+        <div
+          class="absolute top-0 left-0 right-0 h-1/2 bg-gradient-to-b from-white/10 to-transparent rounded-t-[2.5rem] pointer-events-none"
+        >
+        </div>
+
+        <!-- Esquinas decorativas -->
+        <div class="absolute top-4 left-4 w-16 h-16">
+          <div
+            class="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#C9956C]/40 to-transparent"
+          >
+          </div>
+          <div
+            class="absolute top-0 left-0 w-0.5 h-full bg-gradient-to-b from-[#C9956C]/40 to-transparent"
+          >
+          </div>
+        </div>
+        <div class="absolute top-4 right-4 w-16 h-16">
+          <div
+            class="absolute top-0 right-0 w-full h-0.5 bg-gradient-to-l from-[#C9956C]/40 to-transparent"
+          >
+          </div>
+          <div
+            class="absolute top-0 right-0 w-0.5 h-full bg-gradient-to-b from-[#C9956C]/40 to-transparent"
+          >
+          </div>
+        </div>
+        <div class="absolute bottom-4 left-4 w-16 h-16">
+          <div
+            class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#C9956C]/40 to-transparent"
+          >
+          </div>
+          <div
+            class="absolute bottom-0 left-0 w-0.5 h-full bg-gradient-to-t from-[#C9956C]/40 to-transparent"
+          >
+          </div>
+        </div>
+        <div class="absolute bottom-4 right-4 w-16 h-16">
+          <div
+            class="absolute bottom-0 right-0 w-full h-0.5 bg-gradient-to-l from-[#C9956C]/40 to-transparent"
+          >
+          </div>
+          <div
+            class="absolute bottom-0 right-0 w-0.5 h-full bg-gradient-to-t from-[#C9956C]/40 to-transparent"
+          >
+          </div>
+        </div>
+
+        <div class="relative z-10" id="contenido-completo">
+          <!-- TÍTULO -->
+          <div id="titulo-despedida" class="mb-8">
+            <h2 class="font-charm text-3xl text-[#8C5A63] font-bold mb-4">
+              Querida Familia y Amigos
+            </h2>
+            <div class="flex items-center justify-center gap-3">
+              <div
+                class="w-16 h-[2px] bg-gradient-to-r from-transparent to-[#C9956C]"
+              >
+              </div>
+              <div class="w-2 h-2 rounded-full bg-[#C9956C]"></div>
+              <div
+                class="w-16 h-[2px] bg-gradient-to-l from-transparent to-[#C9956C]"
+              >
+              </div>
+            </div>
+          </div>
+
+          <!-- MENSAJE -->
+          <div id="mensaje-despedida" class="space-y-6 mb-10">
+            <p
+              class="font-charm text-xl md:text-2xl lg:text-3xl text-[#5A4A42] leading-relaxed"
+            >
+              Nos llena de felicidad poder compartir con ustedes este momento
+              tan único y especial.
+            </p>
+            <p
+              class="font-charm text-xl md:text-2xl lg:text-3xl text-[#5A4A42] leading-relaxed"
+            >
+              Con la esperanza de que hagamos de este día un recuerdo
+              inolvidable.
+            </p>
+            <p
+              class="font-charm text-xl md:text-2xl lg:text-3xl text-[#5A4A42] leading-relaxed"
+            >
+              Los esperamos con los corazones llenos de emoción, listos para
+              celebrar el amor y crear memorias que permanezcan siempre en
+              nuestros corazones.
+            </p>
+          </div>
+
+          <!-- CORAZÓN DECORATIVO -->
+          <div
+            class="flex items-center justify-center gap-4 my-10"
+            id="linea-decorativa"
+          >
+            <div
+              class="w-20 h-[1px] bg-gradient-to-r from-transparent via-[#C9956C] to-[#C9956C]"
+            >
+            </div>
+            <svg
+              class="w-8 h-8 text-[#8C5A63]"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+              ></path>
+            </svg>
+            <div
+              class="w-20 h-[1px] bg-gradient-to-l from-transparent via-[#C9956C] to-[#C9956C]"
+            >
+            </div>
+          </div>
+
+          <!-- BOTONES -->
+          <div id="seccion-confirmar" class="mt-10">
+            <p
+              class="font-charm text-2xl md:text-3xl lg:text-4xl text-[#8C5A63] font-bold mb-8"
+            >
+              Esperamos contar con tu presencia
+            </p>
+
+            <div
+              class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10"
+              id="botones-confirmar"
+            >
+              <!-- BOTÓN NOVIO -->
+              <a
+                href="https://wa.me/59167013147?text=Me%20complace%20confirmar%20mi%20asistencia%20a%20la%20boda%20de%20Loukas%20y%20Mariely.%20Nos%20vemos%20el%20s%C3%A1bado%207%20de%20marzo.%20%C2%A1Estar%C3%A9%20sin%20falta!%20%F0%9F%92%92%F0%9F%92%8D"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="boton-whatsapp"
+              >
+                <span class="boton-ws-icono">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                    ></path>
+                  </svg>
+                </span>
+                <span class="boton-ws-texto font-charm text-base"
+                  >Confirmar con el Novio</span
+                >
+                <span class="boton-flecha">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </span>
+              </a>
+
+              <!-- SEPARADOR -->
+              <div class="separador-botones pt-4">
+                <!-- <svg
+                  class="w-5 h-5 text-[#C9956C]"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                  ></path>
+                </svg> -->
+              </div>
+
+              <!-- BOTÓN NOVIA -->
+              <a
+                href="https://wa.me/5917175668?text=Me%20complace%20confirmar%20mi%20asistencia%20a%20la%20boda%20de%20Loukas%20y%20Mariely.%20Nos%20vemos%20el%20s%C3%A1bado%207%20de%20marzo.%20%C2%A1Estar%C3%A9%20sin%20falta!%20%F0%9F%92%92%F0%9F%92%8D"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="boton-whatsapp"
+              >
+                <span class="boton-ws-icono">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                    ></path>
+                  </svg>
+                </span>
+                <span class="boton-ws-texto font-charm text-base"
+                  >Confirmar con la Novia</span
+                >
+                <span class="boton-flecha">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center mt-10" id="flores-abajo-despedida">
+        <img
+          src="/imagenes/Separadores.webp"
+          alt="Flores decorativas"
+          class="w-40 md:w-48 lg:w-56 h-auto object-contain opacity-90"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  if (typeof window !== "undefined") {
+    document.addEventListener("DOMContentLoaded", () => {
+      gsap.set("#flores-arriba-despedida", { opacity: 0, y: 20 });
+      gsap.set("#card-despedida", { opacity: 0, y: 30 });
+      gsap.set("#flores-abajo-despedida", { opacity: 0, y: 20 });
+
+      ScrollTrigger.create({
+        trigger: "#flores-arriba-despedida",
+        start: "top 85%",
+        onEnter: () => {
+          const tl = gsap.timeline();
+          tl.to(
+            "#flores-arriba-despedida",
+            { opacity: 1, y: 0, duration: 1, ease: "power2.out" },
+            0,
+          )
+            .to(
+              "#card-despedida",
+              { opacity: 1, y: 0, duration: 1.2, ease: "power2.out" },
+              0.2,
+            )
+            .to(
+              "#flores-abajo-despedida",
+              { opacity: 1, y: 0, duration: 1, ease: "power2.out" },
+              0.4,
+            );
+
+          gsap.to("#linea-decorativa svg", {
+            scale: 1.15,
+            duration: 2.5,
+            ease: "sine.inOut",
+            yoyo: true,
+            repeat: -1,
+            delay: 1.5,
+          });
+        },
+        onLeaveBack: () => {
+          gsap.killTweensOf("#linea-decorativa svg");
+          gsap.set("#flores-arriba-despedida", { opacity: 0, y: 20 });
+          gsap.set("#card-despedida", { opacity: 0, y: 30 });
+          gsap.set("#flores-abajo-despedida", { opacity: 0, y: 20 });
+        },
+      });
+    });
+  }
+</script>
+
+<style>
+  #card-despedida {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  #card-despedida:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(140, 90, 99, 0.2);
+  }
+
+  /* BOTÓN WHATSAPP - UNA SOLA LÍNEA */
+  .boton-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 26px;
+    background: linear-gradient(135deg, #8c5a63, #5a4a42);
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 20px rgba(140, 90, 99, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    white-space: nowrap;
+  }
+
+  .boton-whatsapp::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.15),
+      transparent
+    );
+    transition: left 0.5s ease;
+  }
+
+  .boton-whatsapp::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50px;
+    border: 1px solid rgba(201, 149, 108, 0.4);
+    pointer-events: none;
+  }
+
+  .boton-whatsapp:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(140, 90, 99, 0.5);
+    background: linear-gradient(135deg, #9e6b7a, #6b5550);
+  }
+
+  .boton-whatsapp:hover::before {
+    left: 100%;
+  }
+
+  .boton-whatsapp:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(140, 90, 99, 0.4);
+  }
+
+  .boton-ws-icono {
+    display: flex;
+    align-items: center;
+    color: #c9956c;
+    flex-shrink: 0;
+  }
+
+  .boton-ws-texto {
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .boton-flecha {
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.7);
+    transition:
+      transform 0.3s ease,
+      color 0.3s ease;
+    flex-shrink: 0;
+  }
+
+  .boton-whatsapp:hover .boton-flecha {
+    transform: translateX(4px);
+    color: #c9956c;
+  }
+
+  .separador-botones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+  }
+
+  @media (max-width: 640px) {
+    .separador-botones {
+      transform: rotate(90deg);
+    }
+  }
+</style>

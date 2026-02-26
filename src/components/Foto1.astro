@@ -1,0 +1,221 @@
+---
+// Galeria1.astro
+---
+
+<section class="w-full py-12 relative overflow-hidden">
+    <div class="w-full relative" id="foto-galeria-1">
+        <img
+            src="/imagenes/foto1.webp"
+            alt="Nuestra historia"
+            class="w-full h-auto block"
+            id="img-galeria-1"
+        />
+
+        <!-- <div
+            class="absolute top-0 left-0 right-0 h-32 pointer-events-none"
+            style="background: linear-gradient(to bottom, rgba(201,169,97,0.08), transparent);"
+        >
+        </div> -->
+
+        <div
+            class="absolute bottom-0 left-0 right-0 h-32 pointer-events-none"
+            style="background: linear-gradient(to top, rgba(201,169,97,0.08), transparent);"
+        >
+        </div>
+
+        <div
+            id="marco-ext-1"
+            class="absolute inset-5 md:inset-8 pointer-events-none"
+            style="border: 1px solid rgba(201,169,97,0.4);"
+        >
+        </div>
+
+        <div
+            id="marco-int-1"
+            class="absolute inset-7 md:inset-11 pointer-events-none"
+            style="border: 1px solid rgba(201,169,97,0.2);"
+        >
+        </div>
+
+        <div
+            id="esq-tl-1"
+            class="absolute top-5 md:top-8 left-5 md:left-8 pointer-events-none"
+        >
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <path
+                    d="M28 1H1V28"
+                    stroke="#C9A961"
+                    stroke-width="1.5"
+                    stroke-opacity="0.8"></path>
+                <circle cx="1" cy="1" r="2" fill="#C9A961" fill-opacity="0.8"
+                ></circle>
+            </svg>
+        </div>
+
+        <div
+            id="esq-tr-1"
+            class="absolute top-5 md:top-8 right-5 md:right-8 pointer-events-none rotate-90"
+        >
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <path
+                    d="M28 1H1V28"
+                    stroke="#C9A961"
+                    stroke-width="1.5"
+                    stroke-opacity="0.8"></path>
+                <circle cx="1" cy="1" r="2" fill="#C9A961" fill-opacity="0.8"
+                ></circle>
+            </svg>
+        </div>
+
+        <div
+            id="esq-bl-1"
+            class="absolute bottom-5 md:bottom-8 left-5 md:left-8 pointer-events-none -rotate-90"
+        >
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <path
+                    d="M28 1H1V28"
+                    stroke="#C9A961"
+                    stroke-width="1.5"
+                    stroke-opacity="0.8"></path>
+                <circle cx="1" cy="1" r="2" fill="#C9A961" fill-opacity="0.8"
+                ></circle>
+            </svg>
+        </div>
+
+        <div
+            id="esq-br-1"
+            class="absolute bottom-5 md:bottom-8 right-5 md:right-8 pointer-events-none rotate-180"
+        >
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <path
+                    d="M28 1H1V28"
+                    stroke="#C9A961"
+                    stroke-width="1.5"
+                    stroke-opacity="0.8"></path>
+                <circle cx="1" cy="1" r="2" fill="#C9A961" fill-opacity="0.8"
+                ></circle>
+            </svg>
+        </div>
+
+        <div
+            id="destello-1"
+            class="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 pointer-events-none"
+            style="background: linear-gradient(to bottom, rgba(201,169,97,0.6), transparent);"
+        >
+        </div>
+    </div>
+</section>
+
+<script>
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    document.addEventListener("DOMContentLoaded", () => {
+        gsap.set("#foto-galeria-1", { opacity: 0 });
+        gsap.set("#img-galeria-1", {
+            scale: 1.15,
+            transformOrigin: "center center",
+        });
+        gsap.set("#marco-ext-1", { opacity: 0, scale: 1.08 });
+        gsap.set("#marco-int-1", { opacity: 0, scale: 1.08 });
+        gsap.set(["#esq-tl-1", "#esq-tr-1", "#esq-bl-1", "#esq-br-1"], {
+            opacity: 0,
+            scale: 0.5,
+        });
+        gsap.set("#destello-1", {
+            opacity: 0,
+            scaleY: 0,
+            transformOrigin: "top center",
+        });
+
+        ScrollTrigger.create({
+            trigger: "#foto-galeria-1",
+            start: "top 85%",
+
+            onEnter: () => {
+                const tl = gsap.timeline();
+
+                tl.to(
+                    "#foto-galeria-1",
+                    { opacity: 1, duration: 1.8, ease: "power2.out" },
+                    0,
+                )
+                    .to(
+                        "#img-galeria-1",
+                        { scale: 1, duration: 7, ease: "power1.out" },
+                        0,
+                    )
+                    .to(
+                        "#marco-ext-1",
+                        {
+                            opacity: 1,
+                            scale: 1,
+                            duration: 2,
+                            ease: "power3.out",
+                        },
+                        0.6,
+                    )
+                    .to(
+                        "#marco-int-1",
+                        {
+                            opacity: 1,
+                            scale: 1,
+                            duration: 2,
+                            ease: "power3.out",
+                        },
+                        0.9,
+                    )
+                    .to(
+                        ["#esq-tl-1", "#esq-tr-1", "#esq-bl-1", "#esq-br-1"],
+                        {
+                            opacity: 1,
+                            scale: 1,
+                            duration: 0.8,
+                            stagger: 0.12,
+                            ease: "back.out(2)",
+                        },
+                        1.4,
+                    )
+                    .to(
+                        "#destello-1",
+                        {
+                            opacity: 1,
+                            scaleY: 1,
+                            duration: 1,
+                            ease: "power2.out",
+                        },
+                        1.8,
+                    )
+                    .to(
+                        "#destello-1",
+                        { opacity: 0, duration: 1.2, ease: "power2.in" },
+                        2.8,
+                    );
+
+                gsap.to("#img-galeria-1", {
+                    scale: 1.04,
+                    duration: 14,
+                    ease: "sine.inOut",
+                    yoyo: true,
+                    repeat: -1,
+                    delay: 7,
+                });
+            },
+
+            onLeaveBack: () => {
+                gsap.killTweensOf("#img-galeria-1");
+                gsap.set("#foto-galeria-1", { opacity: 0 });
+                gsap.set("#img-galeria-1", { scale: 1.15 });
+                gsap.set("#marco-ext-1", { opacity: 0, scale: 1.08 });
+                gsap.set("#marco-int-1", { opacity: 0, scale: 1.08 });
+                gsap.set(["#esq-tl-1", "#esq-tr-1", "#esq-bl-1", "#esq-br-1"], {
+                    opacity: 0,
+                    scale: 0.5,
+                });
+                gsap.set("#destello-1", { opacity: 0, scaleY: 0 });
+            },
+        });
+    });
+</script>

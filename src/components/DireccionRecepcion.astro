@@ -1,0 +1,275 @@
+---
+// DireccionSalon.astro
+---
+
+<section class="py-4 px-4 relative">
+  <div class="max-w-xl mx-auto text-center relative">
+    <!-- TÍTULO RECEPCIÓN -->
+    <div class="mb-2" id="titulo-direccion">
+      <h2
+        class="font-charm text-2xl md:text-3xl text-[#8C5A63] font-bold tracking-wide"
+      >
+        Recepción Social
+      </h2>
+    </div>
+
+    <!-- 🏛️ ICONO SALÓN -->
+    <div class="relative mb-4" id="icono-salon">
+      <div class="flex justify-center">
+        <img
+          src="/imagenes/recepcion.png"
+          alt="Icono de recepción"
+          class="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain icono-rosa"
+        />
+      </div>
+    </div>
+
+    <!-- TÍTULO DIRECCIÓN -->
+    <div class="mb-2" id="titulo-salon">
+      <h2
+        class="font-charm text-2xl md:text-3xl text-[#8C5A63] font-bold tracking-wide"
+      >
+        Dirección
+      </h2>
+    </div>
+
+    <!-- INFORMACIÓN DE UBICACIÓN -->
+    <div class="mb-6" id="info-salon">
+      <!-- Nombre del lugar -->
+      <h3 class="font-charm text-xl md:text-2xl text-[#5A4A42] font-bold mb-2">
+        Salón de eventos lado del Canal 9
+      </h3>
+
+      <!-- Dirección -->
+      <p
+        class="font-charm text-xl md:text-xl text-[#5A4A42] leading-relaxed mb-3"
+      >
+        Avenida Félix Satori Roman, lado Canal 9
+      </p>
+
+      <!-- Hora -->
+      <p class="font-charm text-xl md:text-2xl text-[#8C5A63] font-bold">
+        Hora: 5:30 p.m.
+      </p>
+    </div>
+
+    <!-- BOTÓN VER UBICACIÓN ELEGANTE -->
+    <div class="flex justify-center" id="boton-salon">
+      <a
+        href="https://maps.app.goo.gl/EpcJsZsVLitudLSr5"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="boton-salon-elegante group"
+      >
+        <!-- Icono de pin -->
+        <span class="boton-icono">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+            ></path>
+          </svg>
+        </span>
+        <span class="boton-texto font-charm text-base">Ver Ubicación</span>
+        <!-- Flecha -->
+        <span class="boton-flecha">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  if (typeof window !== "undefined") {
+    document.addEventListener("DOMContentLoaded", () => {
+      // Estado inicial
+      gsap.set("#icono-salon", { opacity: 0, scale: 0.8 });
+      gsap.set("#titulo-salon", { opacity: 0, scale: 0.9 });
+      gsap.set("#info-salon", { opacity: 0, scale: 0.9 });
+      gsap.set("#boton-salon", { opacity: 0, scale: 0.9 });
+
+      ScrollTrigger.create({
+        trigger: "#icono-salon",
+        start: "top 85%",
+        end: "top 20%",
+        onEnter: () => {
+          const tl = gsap.timeline();
+
+          tl.to("#icono-salon, #titulo-salon, #info-salon, #boton-salon", {
+            opacity: 1,
+            duration: 1,
+            ease: "power2.out",
+          })
+            .to(
+              "#icono-salon",
+              {
+                scale: 1,
+                duration: 1,
+                ease: "back.out(1.5)",
+              },
+              "<",
+            )
+            .to(
+              "#titulo-salon, #info-salon, #boton-salon",
+              {
+                scale: 1,
+                duration: 1,
+                ease: "back.out(1.2)",
+              },
+              "<",
+            );
+        },
+        onLeaveBack: () => {
+          const tl = gsap.timeline();
+
+          tl.to("#icono-salon, #titulo-salon, #info-salon, #boton-salon", {
+            opacity: 0,
+            duration: 0.5,
+            ease: "power2.in",
+          })
+            .to(
+              "#icono-salon",
+              {
+                scale: 0.8,
+                duration: 0.5,
+                ease: "power2.in",
+              },
+              "<",
+            )
+            .to(
+              "#titulo-salon, #info-salon, #boton-salon",
+              {
+                scale: 0.9,
+                duration: 0.5,
+                ease: "power2.in",
+              },
+              "<",
+            );
+        },
+      });
+
+      console.log("🎉 Sección de Salón inicializada");
+    });
+  }
+</script>
+
+<style>
+  /* Icono color rosa */
+  .icono-rosa {
+    filter: brightness(0) saturate(100%) invert(40%) sepia(25%) saturate(800%)
+      hue-rotate(300deg) brightness(85%) contrast(90%);
+    transition:
+      filter 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  /* BOTÓN ELEGANTE */
+  .boton-salon-elegante {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 26px;
+    background: linear-gradient(135deg, #8c5a63, #5a4a42);
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 20px rgba(140, 90, 99, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  /* Brillo interno */
+  .boton-salon-elegante::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.15),
+      transparent
+    );
+    transition: left 0.5s ease;
+  }
+
+  /* Borde dorado sutil */
+  .boton-salon-elegante::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50px;
+    border: 1px solid rgba(201, 149, 108, 0.4);
+    pointer-events: none;
+  }
+
+  .boton-salon-elegante:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(140, 90, 99, 0.5);
+    background: linear-gradient(135deg, #9e6b7a, #6b5550);
+  }
+
+  .boton-salon-elegante:hover::before {
+    left: 100%;
+  }
+
+  .boton-salon-elegante:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(140, 90, 99, 0.4);
+  }
+
+  .boton-icono {
+    display: flex;
+    align-items: center;
+    color: #c9956c;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+    flex-shrink: 0;
+  }
+
+  .boton-texto {
+    letter-spacing: 0.05em;
+    font-weight: 500;
+  }
+
+  .boton-flecha {
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.7);
+    transition:
+      transform 0.3s ease,
+      color 0.3s ease;
+    flex-shrink: 0;
+  }
+
+  .boton-salon-elegante:hover .boton-flecha {
+    transform: translateX(4px);
+    color: #c9956c;
+  }
+</style>
